@@ -22,14 +22,14 @@ const SPECIALTIES = [
 const FILTERS = ['Все', 'Дизайн', 'Ювелирное дело', 'Текстиль', 'ДПИ', 'Флористика', 'Графика'];
 
 const WORKS = [
-    { title: 'Кольцо «Листва»', author: 'Мария К., Ювелир', tag: 'Ювелирное дело' },
-    { title: 'Платок шёлковый', author: 'Алина В., Текстиль', tag: 'Текстиль' },
-    { title: 'Жостовский поднос', author: 'Дарья М., ДПИ', tag: 'ДПИ' },
-    { title: 'Керамика — ваза', author: 'Иван П., ДПИ', tag: 'ДПИ' },
-    { title: 'Интерьер студии', author: 'Анна Л., Дизайн', tag: 'Дизайн' },
-    { title: 'Авторский букет', author: 'Елена С., Флористика', tag: 'Флористика' },
-    { title: 'Брошь «Ветка»', author: 'Ксения О., Ювелир', tag: 'Ювелирное дело' },
-    { title: 'Айдентика бренда', author: 'Тимур Г., Графика', tag: 'Графика' },
+    { title: 'Кольцо «Листва»', author: 'Мария К., Ювелир', tag: 'Ювелирное дело', image: '/images/products/kolco-listva.jpg' },
+    { title: 'Платок шёлковый', author: 'Алина В., Текстиль', tag: 'Текстиль', image: '/images/products/platoc-osen.jpg' },
+    { title: 'Жостовский поднос', author: 'Дарья М., ДПИ', tag: 'ДПИ', image: '/images/products/zhostovskij-podnos.jpg' },
+    { title: 'Керамика — ваза', author: 'Иван П., ДПИ', tag: 'ДПИ', image: '/images/products/keramika-vaza.jpg' },
+    { title: 'Серьги «Хризантема»', author: 'Ксения О., Ювелир', tag: 'Ювелирное дело', image: '/images/products/sergi-hrizantema.jpg' },
+    { title: 'Авторский букет', author: 'Елена С., Флористика', tag: 'Флористика', image: '/images/products/bukety-suhocvety.jpg' },
+    { title: 'Брошь «Ветка»', author: 'Ксения О., Ювелир', tag: 'Ювелирное дело', image: '/images/products/bresh-vetka.jpg' },
+    { title: 'Плакат «Конструктивизм»', author: 'Тимур Г., Графика', tag: 'Графика', image: '/images/products/plakat-arhitektura.jpg' },
 ];
 
 const PARTNERS = [
@@ -421,7 +421,11 @@ export default function Home({ openDay }) {
                             <div className="home-works__carousel" role="list">
                                 {WORKS.map((w) => (
                                     <div key={w.title} className="home-work-tile" role="listitem">
-                                        <div className="home-work-tile__image" aria-hidden />
+                                        <div className="home-work-tile__image" aria-hidden>
+                                            {w.image ? (
+                                                <img src={w.image} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            ) : null}
+                                        </div>
                                         <div className="home-work-tile__caption">
                                             <span>{w.title}</span>
                                             <span className="home-work-tile__author">{w.author}</span>
