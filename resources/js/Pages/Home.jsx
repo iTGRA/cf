@@ -231,8 +231,12 @@ function AdmissionForm({ onSuccess }) {
    ============================================================ */
 
 const HERO_IMAGES = [
+    '/images/hero_block3.jpg',
     '/images/hero_block1.jpg',
+    '/images/hero_block5.jpg',
     '/images/hero_block2.jpg',
+    '/images/hero_block6.jpg',
+    '/images/hero_block4.jpg',
 ];
 
 export default function Home({ openDay }) {
