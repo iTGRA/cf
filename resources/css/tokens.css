@@ -1,5 +1,9 @@
 @theme {
-    /* === ЦВЕТА === */
+    /* ======================================================================
+       DS1 (light editorial / Cormorant) — используется SiteLayout и Welcome.
+       Остаётся до отдельного решения о миграции всего сайта на DS2.
+       ====================================================================== */
+
     --color-background: #FAFAF8;
     --color-surface: #F2F0EC;
     --color-ink: #1A1817;
@@ -10,11 +14,9 @@
     --color-border: #E0DDD8;
     --color-border-strong: #C8C4BE;
 
-    /* === ТИПОГРАФИКА === */
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    /* === РАЗМЕРЫ ШРИФТОВ === */
     --text-hero: clamp(48px, 6vw, 80px);
     --text-h1: clamp(36px, 4vw, 56px);
     --text-h2: clamp(28px, 3vw, 42px);
@@ -24,13 +26,11 @@
     --text-body-m: 16px;
     --text-body-s: 14px;
 
-    /* === ИНТЕРЛИНЬЯЖ === */
     --leading-tight: 1.05;
     --leading-snug: 1.2;
     --leading-normal: 1.6;
     --leading-loose: 1.75;
 
-    /* === ОТСТУПЫ === */
     --spacing-section-mobile: 80px;
     --spacing-section-desktop: 120px;
     --spacing-gap-mobile: 64px;
@@ -38,10 +38,107 @@
     --container-max: 1280px;
     --container-padding: clamp(24px, 4vw, 48px);
 
-    /* === АНИМАЦИИ === */
     --duration-fast: 150ms;
     --duration-base: 250ms;
     --duration-slow: 400ms;
     --ease-base: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+    /* ======================================================================
+       DS2 (Swiss editorial / Inter + lime) — используется /lab.
+       Кандидат в основную систему сайта. Все токены с префиксом --ds2-.
+       ====================================================================== */
+
+    /* --- Backgrounds --- */
+    --ds2-color-bg-primary: #F2F2EE;
+    --ds2-color-bg-secondary: #EDEDE9;
+    --ds2-color-bg-tertiary: #E4E4DF;
+    --ds2-color-bg-elevated: #FFFFFF;
+    --ds2-color-bg-inverse: #0E0E0C;
+
+    /* --- Foregrounds --- */
+    --ds2-color-fg-primary: #0E0E0C;
+    --ds2-color-fg-secondary: #3B3B38;
+    --ds2-color-fg-tertiary: #73736E;
+    --ds2-color-fg-quaternary: #A8A8A2;
+    --ds2-color-fg-inverse: #F2F2EE;
+
+    /* --- Borders --- */
+    --ds2-color-border-subtle: #E0E0DB;
+    --ds2-color-border-default: #CECEC8;
+    --ds2-color-border-strong: #0E0E0C;
+
+    /* --- Accents --- */
+    --ds2-color-accent-primary: #C6F24E;
+    --ds2-color-accent-primary-hover: #B8E63F;
+    --ds2-color-accent-primary-active: #A8D633;
+    --ds2-color-accent-primary-subtle: #EDFACD;
+    --ds2-color-accent-secondary: #7FD4E0;
+    --ds2-color-accent-secondary-hover: #6CC4D1;
+    --ds2-color-accent-secondary-subtle: #DAF0F4;
+
+    /* --- Semantic --- */
+    --ds2-color-success: #6BA368;
+    --ds2-color-success-subtle: #DEEDDC;
+    --ds2-color-warning: #C89B3F;
+    --ds2-color-warning-subtle: #F2E5C4;
+    --ds2-color-error: #B8453E;
+    --ds2-color-error-subtle: #F0D6D4;
+
+    /* --- Typography --- */
+    --ds2-font-sans: 'Inter', 'Inter Display', -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --ds2-font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas,
+        'Liberation Mono', 'Courier New', monospace;
+
+    --ds2-text-display-xl: 96px;
+    --ds2-text-display-lg: 72px;
+    --ds2-text-display-md: 56px;
+    --ds2-text-h1: 44px;
+    --ds2-text-h2: 32px;
+    --ds2-text-h3: 24px;
+    --ds2-text-h4: 20px;
+    --ds2-text-lead: 18px;
+    --ds2-text-body-lg: 17px;
+    --ds2-text-body: 15px;
+    --ds2-text-body-sm: 14px;
+    --ds2-text-caption: 13px;
+    --ds2-text-meta: 12px;
+    --ds2-text-label: 11px;
+    --ds2-text-button: 15px;
+    --ds2-text-button-sm: 13px;
+    --ds2-text-quote: 22px;
+
+    /* --- Radii --- */
+    --ds2-radius-none: 0;
+    --ds2-radius-sm: 8px;
+    --ds2-radius-md: 12px;
+    --ds2-radius-lg: 16px;
+    --ds2-radius-xl: 20px;
+    --ds2-radius-2xl: 24px;
+    --ds2-radius-3xl: 32px;
+    --ds2-radius-full: 9999px;
+
+    /* --- Borders --- */
+    --ds2-border-hairline: 1px;
+    --ds2-border-default: 1.5px;
+    --ds2-border-strong: 2px;
+
+    /* --- Shadows --- */
+    --ds2-shadow-none: none;
+    --ds2-shadow-float: 0 1px 2px rgba(14, 14, 12, 0.04),
+        0 4px 12px rgba(14, 14, 12, 0.06);
+    --ds2-shadow-modal: 0 8px 32px rgba(14, 14, 12, 0.12);
+    --ds2-shadow-focus: 0 0 0 3px rgba(198, 242, 78, 0.35);
+
+    /* --- Motion --- */
+    --ds2-duration-instant: 0ms;
+    --ds2-duration-fast: 150ms;
+    --ds2-duration-base: 250ms;
+    --ds2-duration-slow: 400ms;
+    --ds2-duration-slower: 600ms;
+    --ds2-ease-linear: linear;
+    --ds2-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ds2-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ds2-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
