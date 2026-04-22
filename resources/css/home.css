@@ -1924,3 +1924,180 @@ a.home-contact-item__value:hover {
         animation-duration: var(--ds2-duration-fast) !important;
     }
 }
+
+/* ============================================================
+   CONTACTS PAGE — /contacts
+   Scoped under .page-contacts
+   ============================================================ */
+
+.page-contacts {
+    background: var(--ds2-color-bg-primary);
+    color: var(--ds2-color-fg-primary);
+    font-family: var(--ds2-font-sans);
+    font-optical-sizing: auto;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.page-contacts *,
+.page-contacts *::before,
+.page-contacts *::after { box-sizing: border-box; }
+
+.page-contacts h1,
+.page-contacts h2,
+.page-contacts h3,
+.page-contacts h4 {
+    font-family: var(--ds2-font-sans);
+    font-weight: 500;
+}
+
+.contacts-hero {
+    padding-top: 128px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--ds2-color-border-subtle);
+}
+
+@media (min-width: 1024px) {
+    .contacts-hero { padding-top: 160px; }
+}
+
+.contacts-hero__h1 {
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--ds2-color-fg-primary);
+    max-width: 24ch;
+    margin-bottom: 20px;
+}
+
+.contacts-hero__sub {
+    font-size: var(--ds2-text-lead);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ds2-color-fg-secondary);
+    max-width: 52ch;
+}
+
+.contacts-grid {
+    padding-block: 80px;
+}
+
+.contacts-grid__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+}
+
+@media (min-width: 768px) {
+    .contacts-grid__items { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1200px) {
+    .contacts-grid__items { grid-template-columns: repeat(4, 1fr); }
+}
+
+.contacts-card {
+    background: var(--ds2-color-bg-elevated);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-card--accent {
+    background: var(--ds2-color-accent-primary);
+}
+
+.contacts-card__kicker {
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ds2-color-fg-tertiary);
+}
+
+.contacts-card--accent .contacts-card__kicker {
+    color: rgba(14, 14, 12, 0.5);
+}
+
+.contacts-card__title {
+    font-size: var(--ds2-text-h3);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ds2-color-fg-primary);
+}
+
+.contacts-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.contacts-card__row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacts-card__label {
+    font-size: var(--ds2-text-meta);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ds2-color-fg-quaternary);
+}
+
+.contacts-card__value {
+    font-size: var(--ds2-text-body);
+    color: var(--ds2-color-fg-primary);
+    line-height: 1.45;
+}
+
+.contacts-card__value a {
+    color: var(--ds2-color-fg-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--ds2-duration-fast) var(--ds2-ease-out);
+}
+
+.contacts-card__value a:hover { color: var(--ds2-color-fg-secondary); }
+
+.contacts-form-section {
+    padding-block: 96px;
+    border-top: 1px solid var(--ds2-color-border-subtle);
+    background: var(--ds2-color-bg-secondary);
+}
+
+.contacts-form-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+}
+
+@media (min-width: 1024px) {
+    .contacts-form-inner { grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+}
+
+.contacts-form-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-form-promo__title {
+    font-size: var(--ds2-text-display-sm);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-contacts * {
+        transition-duration: var(--ds2-duration-fast) !important;
+        animation-duration: var(--ds2-duration-fast) !important;
+    }
+}
