@@ -1292,3 +1292,349 @@ a.home-contact-item__value:hover {
         animation-duration: var(--ds2-duration-fast) !important;
     }
 }
+
+/* ============================================================
+   ABITURIENT PAGE — /abiturientam
+   Scoped under .page-abiturient — reuses home-* utilities.
+   ============================================================ */
+
+.page-abiturient {
+    background: var(--ds2-color-bg-primary);
+    color: var(--ds2-color-fg-primary);
+    font-family: var(--ds2-font-sans);
+    font-optical-sizing: auto;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+.page-abiturient *,
+.page-abiturient *::before,
+.page-abiturient *::after {
+    box-sizing: border-box;
+}
+
+.page-abiturient h1,
+.page-abiturient h2,
+.page-abiturient h3,
+.page-abiturient h4 {
+    font-family: var(--ds2-font-sans);
+    font-weight: 500;
+}
+
+/* ---- Abiturient Hero ---- */
+
+.abit-hero {
+    padding-top: 128px;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+    .abit-hero { padding-top: 160px; padding-bottom: 96px; }
+}
+
+.abit-hero__kicker {
+    font-family: var(--ds2-font-sans);
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ds2-color-fg-tertiary);
+    margin-bottom: 20px;
+}
+
+.abit-hero__h1 {
+    font-family: var(--ds2-font-sans);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    color: var(--ds2-color-fg-primary);
+    max-width: 20ch;
+    margin-bottom: 20px;
+}
+
+.abit-hero__sub {
+    font-size: var(--ds2-text-lead);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ds2-color-fg-secondary);
+    max-width: 54ch;
+    margin-bottom: 40px;
+}
+
+.abit-hero__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .abit-hero__filters { flex-direction: row; align-items: center; gap: 16px; }
+}
+
+.abit-hero__filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.abit-type-btn {
+    font-family: var(--ds2-font-sans);
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.04em;
+    padding: 8px 16px;
+    border: 1.5px solid var(--ds2-color-border-default);
+    background: transparent;
+    color: var(--ds2-color-fg-secondary);
+    cursor: pointer;
+    transition: all var(--ds2-duration-fast) var(--ds2-ease-out);
+    border-radius: var(--ds2-radius-full);
+}
+
+.abit-type-btn:hover {
+    border-color: var(--ds2-color-border-strong);
+    color: var(--ds2-color-fg-primary);
+}
+
+.abit-type-btn--active {
+    background: var(--ds2-color-bg-inverse);
+    border-color: var(--ds2-color-bg-inverse);
+    color: var(--ds2-color-fg-inverse);
+}
+
+.abit-type-btn--active:hover {
+    background: var(--ds2-color-bg-inverse);
+    border-color: var(--ds2-color-bg-inverse);
+    color: var(--ds2-color-fg-inverse);
+}
+
+/* ---- Specialties section ---- */
+
+.abit-specs {
+    padding-block: 80px;
+    border-top: 1px solid var(--ds2-color-border-subtle);
+}
+
+.abit-specs__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .abit-specs__controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.abit-specs__count {
+    font-family: var(--ds2-font-sans);
+    font-size: var(--ds2-text-meta);
+    color: var(--ds2-color-fg-tertiary);
+    font-weight: 500;
+}
+
+/* ---- Calendar ---- */
+
+.abit-calendar {
+    padding-block: 96px;
+    border-top: 1px solid var(--ds2-color-border-subtle);
+}
+
+.abit-calendar__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+    .abit-calendar__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.abit-calendar__step {
+    background: var(--ds2-color-bg-elevated);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.abit-calendar__step--accent {
+    background: var(--ds2-color-accent-primary);
+}
+
+.abit-calendar__num {
+    font-family: var(--ds2-font-sans);
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--ds2-color-fg-quaternary);
+}
+
+.abit-calendar__step--accent .abit-calendar__num {
+    color: rgba(14, 14, 12, 0.25);
+}
+
+.abit-calendar__label {
+    font-family: var(--ds2-font-sans);
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ds2-color-fg-tertiary);
+}
+
+.abit-calendar__step--accent .abit-calendar__label {
+    color: rgba(14, 14, 12, 0.5);
+}
+
+.abit-calendar__title {
+    font-family: var(--ds2-font-sans);
+    font-size: var(--ds2-text-h2);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--ds2-color-fg-primary);
+}
+
+.abit-calendar__desc {
+    font-size: var(--ds2-text-body-sm);
+    line-height: 1.5;
+    color: var(--ds2-color-fg-secondary);
+    margin-top: 4px;
+}
+
+.abit-calendar__step--accent .abit-calendar__desc {
+    color: rgba(14, 14, 12, 0.65);
+}
+
+/* ---- Documents ---- */
+
+.abit-docs {
+    padding-block: 96px;
+    border-top: 1px solid var(--ds2-color-border-subtle);
+}
+
+.abit-docs__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+}
+
+@media (min-width: 1024px) {
+    .abit-docs__inner { grid-template-columns: 5fr 6fr; gap: 80px; align-items: start; }
+}
+
+.abit-docs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.abit-docs__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-block: 20px;
+    border-bottom: 1px solid var(--ds2-color-border-subtle);
+}
+
+.abit-docs__item:first-child {
+    border-top: 1px solid var(--ds2-color-border-subtle);
+}
+
+.abit-docs__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: var(--ds2-color-accent-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abit-docs__text {
+    font-size: var(--ds2-text-body);
+    line-height: 1.5;
+    color: var(--ds2-color-fg-primary);
+}
+
+.abit-docs__note {
+    margin-top: 24px;
+    font-size: var(--ds2-text-body-sm);
+    color: var(--ds2-color-fg-tertiary);
+}
+
+.abit-docs__contact {
+    margin-top: 8px;
+}
+
+.abit-docs__contact a {
+    font-weight: 600;
+    font-size: var(--ds2-text-h3);
+    color: var(--ds2-color-fg-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.abit-docs__contact a:hover {
+    color: var(--ds2-color-fg-secondary);
+}
+
+/* ---- Courses form ---- */
+
+.abit-courses {
+    padding-block: 96px;
+    border-top: 1px solid var(--ds2-color-border-subtle);
+    background: var(--ds2-color-bg-secondary);
+}
+
+.abit-courses__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+}
+
+@media (min-width: 1024px) {
+    .abit-courses__inner { grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+}
+
+.abit-courses__promo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.abit-courses__title {
+    font-family: var(--ds2-font-sans);
+    font-size: var(--ds2-text-display-sm);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ds2-color-fg-primary);
+}
+
+.abit-courses__desc {
+    font-size: var(--ds2-text-body);
+    line-height: 1.6;
+    color: var(--ds2-color-fg-secondary);
+    max-width: 44ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-abiturient * {
+        transition-duration: var(--ds2-duration-fast) !important;
+        animation-duration: var(--ds2-duration-fast) !important;
+    }
+}
