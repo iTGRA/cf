@@ -153,7 +153,11 @@ function SpecCard({ spec }) {
     return (
         <Link href={`/specialnosti/${spec.slug}`} className="home-spec-card">
             <div className="home-spec-card__media">
-                <div className="home-spec-card__image" />
+                <div className="home-spec-card__image">
+                    {spec.image ? (
+                        <img src={spec.image} alt="" className="home-spec-card__image-bg" />
+                    ) : null}
+                </div>
                 <div className="home-spec-card__pill">{spec.tag}</div>
             </div>
             <div className="home-spec-card__body">
