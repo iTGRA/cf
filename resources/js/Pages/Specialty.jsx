@@ -112,7 +112,7 @@ export default function Specialty({ slug }) {
     return (
         <>
             <Head>
-                <title>{specialty.h1} | Колледж Фаберже</title>
+                <title>{`${specialty.h1} | Колледж Фаберже`}</title>
                 <meta name="description" content={`${specialty.title} — ${specialty.utp}. Поступление после 9 класса, бюджетные места. Колледж им. Карла Фаберже, Москва.`} />
             </Head>
 

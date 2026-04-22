@@ -14,7 +14,7 @@ export default function NewsShow({ item, related }) {
     return (
         <>
             <Head>
-                <title>{item.title} | Колледж Фаберже</title>
+                <title>{`${item.title} | Колледж Фаберже`}</title>
                 <meta name="description" content={item.excerpt ?? item.title} />
             </Head>
 
