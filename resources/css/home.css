@@ -2101,3 +2101,185 @@ a.home-contact-item__value:hover {
         animation-duration: var(--ds2-duration-fast) !important;
     }
 }
+
+/* ============================================================
+   NEWS PAGES — /news + /news/{slug}
+   Scoped under .page-news
+   ============================================================ */
+
+.page-news {
+    background: var(--ds2-color-bg-primary);
+    color: var(--ds2-color-fg-primary);
+    font-family: var(--ds2-font-sans);
+    font-optical-sizing: auto;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.page-news *,
+.page-news *::before,
+.page-news *::after { box-sizing: border-box; }
+
+.page-news h1,
+.page-news h2,
+.page-news h3,
+.page-news h4 {
+    font-family: var(--ds2-font-sans);
+    font-weight: 500;
+}
+
+.news-hero {
+    padding-top: 128px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--ds2-color-border-subtle);
+}
+
+@media (min-width: 1024px) {
+    .news-hero { padding-top: 160px; }
+}
+
+.news-hero__h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+}
+
+.news-grid {
+    padding-block: 80px;
+}
+
+.news-grid__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+}
+
+@media (min-width: 768px) {
+    .news-grid__items { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1200px) {
+    .news-grid__items { grid-template-columns: repeat(3, 1fr); }
+}
+
+.news-card {
+    background: var(--ds2-color-bg-elevated);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: background var(--ds2-duration-fast) var(--ds2-ease-out);
+    cursor: pointer;
+}
+
+.news-card:hover {
+    background: var(--ds2-color-bg-tertiary);
+}
+
+.news-card__kicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.news-card__date {
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.06em;
+    color: var(--ds2-color-fg-tertiary);
+    text-transform: uppercase;
+}
+
+.news-card__type-pill {
+    font-weight: 600;
+    font-size: var(--ds2-text-label);
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: var(--ds2-radius-full);
+    background: var(--ds2-color-accent-primary-subtle);
+    color: var(--ds2-color-fg-secondary);
+}
+
+.news-card__title {
+    font-size: var(--ds2-text-h3);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--ds2-color-fg-primary);
+    flex: 1;
+}
+
+.news-card__excerpt {
+    font-size: var(--ds2-text-body-sm);
+    line-height: 1.55;
+    color: var(--ds2-color-fg-secondary);
+}
+
+.news-card__arrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--ds2-text-body-sm);
+    font-weight: 600;
+    color: var(--ds2-color-fg-tertiary);
+    transition: gap var(--ds2-duration-base) var(--ds2-ease-out),
+                color var(--ds2-duration-fast) var(--ds2-ease-out);
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.news-card:hover .news-card__arrow {
+    gap: 12px;
+    color: var(--ds2-color-fg-primary);
+}
+
+/* ---- Single article ---- */
+
+.news-article-hero {
+    padding-top: 128px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--ds2-color-border-subtle);
+}
+
+@media (min-width: 1024px) {
+    .news-article-hero { padding-top: 160px; }
+}
+
+.news-article-hero__inner {
+    max-width: 800px;
+}
+
+.news-article-hero__h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.news-article-body {
+    padding-block: 64px;
+}
+
+.news-article-body__content {
+    max-width: 720px;
+    font-size: var(--ds2-text-body);
+    line-height: 1.7;
+    color: var(--ds2-color-fg-secondary);
+}
+
+.news-article-body__content p {
+    margin-bottom: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-news * {
+        transition-duration: var(--ds2-duration-fast) !important;
+        animation-duration: var(--ds2-duration-fast) !important;
+    }
+}

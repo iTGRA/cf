@@ -3,6 +3,7 @@
 use App\Http\Controllers\AbiturientController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,8 @@ Route::get('/abiturientam', [AbiturientController::class, 'index'])->name('abitu
 Route::redirect('/specialnosti', '/abiturientam', 301);
 Route::get('/specialnosti/{slug}', [SpecialtyController::class, 'show'])->name('specialnosti.show');
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
 Route::get('/lab', function () {
     return Inertia::render('Lab');
