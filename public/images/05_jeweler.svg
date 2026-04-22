@@ -1,0 +1,89 @@
+<svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="480" height="360" fill="#E8D5A8"/>
+
+<g fill="none" stroke="#8F6628" stroke-width="12">
+<ellipse cx="0" cy="40" rx="40" ry="24"/>
+<ellipse cx="80" cy="40" rx="40" ry="24"/>
+<ellipse cx="160" cy="40" rx="40" ry="24"/>
+<ellipse cx="240" cy="40" rx="40" ry="24"/>
+<ellipse cx="320" cy="40" rx="40" ry="24"/>
+<ellipse cx="400" cy="40" rx="40" ry="24"/>
+<ellipse cx="480" cy="40" rx="40" ry="24"/>
+</g>
+
+<g fill="none" stroke="#C9952E" stroke-width="12">
+<ellipse cx="40" cy="40" rx="24" ry="40"/>
+<ellipse cx="120" cy="40" rx="24" ry="40"/>
+<ellipse cx="200" cy="40" rx="24" ry="40"/>
+<ellipse cx="280" cy="40" rx="24" ry="40"/>
+<ellipse cx="360" cy="40" rx="24" ry="40"/>
+<ellipse cx="440" cy="40" rx="24" ry="40"/>
+</g>
+
+<g fill="none" stroke="#8F6628" stroke-width="12">
+<ellipse cx="0" cy="120" rx="40" ry="24"/>
+<ellipse cx="80" cy="120" rx="40" ry="24"/>
+<ellipse cx="160" cy="120" rx="40" ry="24"/>
+<ellipse cx="240" cy="120" rx="40" ry="24"/>
+<ellipse cx="320" cy="120" rx="40" ry="24"/>
+<ellipse cx="400" cy="120" rx="40" ry="24"/>
+<ellipse cx="480" cy="120" rx="40" ry="24"/>
+</g>
+
+<g fill="none" stroke="#C9952E" stroke-width="12">
+<ellipse cx="40" cy="120" rx="24" ry="40"/>
+<ellipse cx="120" cy="120" rx="24" ry="40"/>
+<ellipse cx="200" cy="120" rx="24" ry="40"/>
+<ellipse cx="280" cy="120" rx="24" ry="40"/>
+<ellipse cx="360" cy="120" rx="24" ry="40"/>
+<ellipse cx="440" cy="120" rx="24" ry="40"/>
+</g>
+
+<g fill="none" stroke="#8F6628" stroke-width="12">
+<ellipse cx="0" cy="200" rx="40" ry="24"/>
+<ellipse cx="80" cy="200" rx="40" ry="24"/>
+<ellipse cx="160" cy="200" rx="40" ry="24"/>
+<ellipse cx="240" cy="200" rx="40" ry="24"/>
+<ellipse cx="320" cy="200" rx="40" ry="24"/>
+<ellipse cx="400" cy="200" rx="40" ry="24"/>
+<ellipse cx="480" cy="200" rx="40" ry="24"/>
+</g>
+
+<g fill="none" stroke="#C9952E" stroke-width="12">
+<ellipse cx="40" cy="200" rx="24" ry="40"/>
+<ellipse cx="120" cy="200" rx="24" ry="40"/>
+<ellipse cx="200" cy="200" rx="24" ry="40"/>
+<ellipse cx="280" cy="200" rx="24" ry="40"/>
+<ellipse cx="360" cy="200" rx="24" ry="40"/>
+<ellipse cx="440" cy="200" rx="24" ry="40"/>
+</g>
+
+<g fill="none" stroke="#8F6628" stroke-width="12">
+<ellipse cx="0" cy="280" rx="40" ry="24"/>
+<ellipse cx="80" cy="280" rx="40" ry="24"/>
+<ellipse cx="160" cy="280" rx="40" ry="24"/>
+<ellipse cx="240" cy="280" rx="40" ry="24"/>
+<ellipse cx="320" cy="280" rx="40" ry="24"/>
+<ellipse cx="400" cy="280" rx="40" ry="24"/>
+<ellipse cx="480" cy="280" rx="40" ry="24"/>
+</g>
+
+<g fill="none" stroke="#C9952E" stroke-width="12">
+<ellipse cx="40" cy="280" rx="24" ry="40"/>
+<ellipse cx="120" cy="280" rx="24" ry="40"/>
+<ellipse cx="200" cy="280" rx="24" ry="40"/>
+<ellipse cx="280" cy="280" rx="24" ry="40"/>
+<ellipse cx="360" cy="280" rx="24" ry="40"/>
+<ellipse cx="440" cy="280" rx="24" ry="40"/>
+</g>
+
+<g fill="none" stroke="#8F6628" stroke-width="12">
+<ellipse cx="0" cy="360" rx="40" ry="24"/>
+<ellipse cx="80" cy="360" rx="40" ry="24"/>
+<ellipse cx="160" cy="360" rx="40" ry="24"/>
+<ellipse cx="240" cy="360" rx="40" ry="24"/>
+<ellipse cx="320" cy="360" rx="40" ry="24"/>
+<ellipse cx="400" cy="360" rx="40" ry="24"/>
+<ellipse cx="480" cy="360" rx="40" ry="24"/>
+</g>
+</svg>

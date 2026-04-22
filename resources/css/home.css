@@ -606,6 +606,15 @@
     transform: scale(1.04);
 }
 
+.home-spec-card__image-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 .home-spec-card__image::after {
     content: '';
     position: absolute;
@@ -616,6 +625,7 @@
         transparent 60%,
         var(--ds2-color-bg-elevated) 100%
     );
+    z-index: 1;
 }
 
 .home-spec-card__pill {

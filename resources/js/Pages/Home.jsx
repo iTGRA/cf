@@ -8,15 +8,15 @@ import HomeFooter from '../Components/Layout/HomeFooter';
    ============================================================ */
 
 const SPECIALTIES = [
-    { slug: 'dizajn-interera', title: 'Дизайн интерьера', utp: 'Создавай пространства, в которых хочется жить', type: 'Специальность', tag: 'Дизайн' },
-    { slug: 'dizajn-yuvelir', title: 'Дизайн в ювелирной промышленности', utp: 'Проектируй украшения с помощью 3D-технологий', type: 'Специальность', tag: 'Дизайн' },
-    { slug: 'dizajn-legkaya', title: 'Дизайн в лёгкой промышленности', utp: 'Шей авторские коллекции и работай с брендами', type: 'Специальность', tag: 'Дизайн' },
-    { slug: 'dpi', title: 'ДПИ и народные промыслы', utp: 'Роспись, керамика, лаковая миниатюра — живые традиции', type: 'Специальность', tag: 'ДПИ' },
-    { slug: 'tekstil', title: 'Художественное оформление текстиля', utp: 'Создавай узоры и коллекции для лёгкой промышленности', type: 'Специальность', tag: 'Текстиль' },
-    { slug: 'kostyum', title: 'Художник по костюму', utp: 'Твои костюмы — на сцене Большого театра', type: 'Специальность', tag: 'Текстиль' },
-    { slug: 'floristika', title: 'Мастер флористического сервиса', utp: 'Флористика как профессия — быстрый старт за 2 года', type: 'Профессия', tag: 'Флористика' },
-    { slug: 'yuvelir', title: 'Ювелир', utp: 'Альма-матер российских ювелиров — начни здесь', type: 'Профессия', tag: 'Ювелирное дело' },
-    { slug: 'grafika', title: 'Графический дизайнер', utp: 'Логотипы, айдентика, визуальные коммуникации', type: 'Профессия', tag: 'Графика' },
+    { slug: 'dizajn-interera', title: 'Дизайн интерьера', utp: 'Создавай пространства, в которых хочется жить', type: 'Специальность', tag: 'Дизайн', image: '/images/02_interior_design.svg' },
+    { slug: 'dizajn-yuvelir', title: 'Дизайн в ювелирной промышленности', utp: 'Проектируй украшения с помощью 3D-технологий', type: 'Специальность', tag: 'Дизайн', image: '/images/01_jewelry_design.svg' },
+    { slug: 'dizajn-legkaya', title: 'Дизайн в лёгкой промышленности', utp: 'Шей авторские коллекции и работай с брендами', type: 'Специальность', tag: 'Дизайн', image: '/images/07_light_industry.svg' },
+    { slug: 'dpi', title: 'ДПИ и народные промыслы', utp: 'Роспись, керамика, лаковая миниатюра — живые традиции', type: 'Специальность', tag: 'ДПИ', image: '/images/03_folk_crafts.svg' },
+    { slug: 'tekstil', title: 'Художественное оформление текстиля', utp: 'Создавай узоры и коллекции для лёгкой промышленности', type: 'Специальность', tag: 'Текстиль', image: '/images/06_textile.svg' },
+    { slug: 'kostyum', title: 'Художник по костюму', utp: 'Твои костюмы — на сцене Большого театра', type: 'Специальность', tag: 'Текстиль', image: '/images/08_costume_designer.svg' },
+    { slug: 'floristika', title: 'Мастер флористического сервиса', utp: 'Флористика как профессия — быстрый старт за 2 года', type: 'Профессия', tag: 'Флористика', image: '/images/09_florist.svg' },
+    { slug: 'yuvelir', title: 'Ювелир', utp: 'Альма-матер российских ювелиров — начни здесь', type: 'Профессия', tag: 'Ювелирное дело', image: '/images/05_jeweler.svg' },
+    { slug: 'grafika', title: 'Графический дизайнер', utp: 'Логотипы, айдентика, визуальные коммуникации', type: 'Профессия', tag: 'Графика', image: '/images/04_graphic_design.svg' },
 ];
 
 const FILTERS = ['Все', 'Дизайн', 'Ювелирное дело', 'Текстиль', 'ДПИ', 'Флористика', 'Графика'];
@@ -373,7 +373,11 @@ export default function Home({ openDay }) {
                                         data-source="spec-card"
                                     >
                                         <div className="home-spec-card__media">
-                                            <div className="home-spec-card__image" />
+                                            <div className="home-spec-card__image">
+                                                {spec.image ? (
+                                                    <img src={spec.image} alt="" className="home-spec-card__image-bg" />
+                                                ) : null}
+                                            </div>
                                             <div className="home-spec-card__pill">{spec.type}</div>
                                         </div>
                                         <div className="home-spec-card__body">

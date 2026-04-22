@@ -1,0 +1,43 @@
+<svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="480" height="360" fill="#EDFACD"/>
+
+<rect x="0" y="0" width="180" height="120" fill="#C6F24E"/>
+<rect x="20" y="20" width="80" height="12" fill="#7A9A1E"/>
+<rect x="20" y="40" width="140" height="12" fill="#7A9A1E"/>
+<rect x="20" y="60" width="100" height="12" fill="#7A9A1E"/>
+<rect x="20" y="80" width="120" height="12" fill="#7A9A1E"/>
+
+<rect x="180" y="0" width="120" height="180" fill="#A8D633"/>
+<circle cx="240" cy="90" r="50" fill="#EDFACD"/>
+<circle cx="240" cy="90" r="28" fill="#7A9A1E"/>
+
+<rect x="300" y="0" width="180" height="120" fill="#C6F24E"/>
+<rect x="320" y="20" width="140" height="20" fill="#A8D633"/>
+<rect x="320" y="50" width="140" height="12" fill="#7A9A1E"/>
+<rect x="320" y="70" width="100" height="12" fill="#7A9A1E"/>
+<rect x="320" y="90" width="80" height="12" fill="#7A9A1E"/>
+
+<rect x="0" y="120" width="180" height="180" fill="#A8D633"/>
+<polygon points="0,120 180,120 0,300" fill="#C6F24E"/>
+<polygon points="60,180 180,300 60,300" fill="#7A9A1E"/>
+
+<rect x="300" y="120" width="180" height="120" fill="#C6F24E"/>
+<rect x="320" y="140" width="60" height="60" fill="#7A9A1E"/>
+<rect x="400" y="140" width="60" height="60" fill="#A8D633"/>
+<rect x="320" y="210" width="140" height="10" fill="#7A9A1E"/>
+
+<rect x="180" y="180" width="120" height="120" fill="#C6F24E"/>
+<polygon points="180,180 300,300 180,300" fill="#A8D633"/>
+<polygon points="300,180 300,300 180,300" fill="#7A9A1E" opacity="0.3"/>
+
+<rect x="0" y="300" width="300" height="60" fill="#C6F24E"/>
+<rect x="20" y="320" width="60" height="20" fill="#7A9A1E"/>
+<rect x="100" y="320" width="100" height="20" fill="#A8D633"/>
+<rect x="220" y="320" width="60" height="20" fill="#7A9A1E"/>
+
+<rect x="300" y="240" width="180" height="120" fill="#A8D633"/>
+<rect x="320" y="260" width="140" height="14" fill="#EDFACD"/>
+<rect x="320" y="285" width="100" height="14" fill="#EDFACD"/>
+<rect x="320" y="310" width="120" height="14" fill="#EDFACD"/>
+<rect x="320" y="335" width="80" height="14" fill="#EDFACD"/>
+</svg>
