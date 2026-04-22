@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AbiturientController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -9,6 +10,7 @@ use Inertia\Inertia;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/abiturientam', [AbiturientController::class, 'index'])->name('abiturientam');
 Route::redirect('/specialnosti', '/abiturientam', 301);
+Route::get('/specialnosti/{slug}', [SpecialtyController::class, 'show'])->name('specialnosti.show');
 
 Route::get('/lab', function () {
     return Inertia::render('Lab');
