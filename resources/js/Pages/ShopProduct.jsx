@@ -61,22 +61,25 @@ export default function ShopProduct({ slug }) {
                             {/* Gallery */}
                             <div className="product-gallery">
                                 <div className="product-gallery__main">
-                                    <div
-                                        style={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: bg,
-                                            transition: 'opacity 300ms',
-                                        }}
-                                    />
-                                    <div className="product-gallery__placeholder">
-                                        <div style={{ fontFamily: 'var(--ds2-font-sans)', fontWeight: 700, fontSize: 64, color: 'rgba(14,14,12,0.08)', letterSpacing: '-0.04em' }}>
-                                            {product.title.slice(0, 2)}
-                                        </div>
-                                        <div style={{ fontFamily: 'var(--ds2-font-sans)', fontSize: 'var(--ds2-text-meta)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--ds2-color-fg-quaternary)' }}>
-                                            Фото скоро
-                                        </div>
-                                    </div>
+                                    {product.image ? (
+                                        <img
+                                            src={product.image}
+                                            alt={product.title}
+                                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    ) : (
+                                        <>
+                                            <div style={{ position: 'absolute', inset: 0, background: bg, transition: 'opacity 300ms' }} />
+                                            <div className="product-gallery__placeholder">
+                                                <div style={{ fontFamily: 'var(--ds2-font-sans)', fontWeight: 700, fontSize: 64, color: 'rgba(14,14,12,0.08)', letterSpacing: '-0.04em' }}>
+                                                    {product.title.slice(0, 2)}
+                                                </div>
+                                                <div style={{ fontFamily: 'var(--ds2-font-sans)', fontSize: 'var(--ds2-text-meta)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--ds2-color-fg-quaternary)' }}>
+                                                    Фото скоро
+                                                </div>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                                 <div className="product-gallery__thumbnails">
                                     {[0, 1, 2].map((i) => (
@@ -86,7 +89,10 @@ export default function ShopProduct({ slug }) {
                                             className={`product-gallery__thumb${activeThumb === i ? ' product-gallery__thumb--active' : ''}`}
                                             onClick={() => setActiveThumb(i)}
                                             aria-label={`Фото ${i + 1}`}
-                                            style={{ background: bg, opacity: activeThumb === i ? 1 : 0.5 }}
+                                            style={product.image
+                                                ? { backgroundImage: `url(${product.image})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: activeThumb === i ? 1 : 0.5 }
+                                                : { background: bg, opacity: activeThumb === i ? 1 : 0.5 }
+                                            }
                                         />
                                     ))}
                                 </div>
@@ -194,7 +200,11 @@ export default function ShopProduct({ slug }) {
                                     <div key={p.slug} className="product-card">
                                         <Link href={`/shop/${p.slug}`} style={{ display: 'contents' }}>
                                             <div className="product-card__media">
-                                                <div className="product-card__image" style={{ background: PALETTE[i % PALETTE.length] }} />
+                                                {p.image ? (
+                                                    <img src={p.image} alt={p.title} className="product-card__image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                                                ) : (
+                                                    <div className="product-card__image" style={{ background: PALETTE[i % PALETTE.length] }} />
+                                                )}
                                                 {p.isNew ? <span className="product-card__badge">Новинка</span> : null}
                                                 {!p.inStock ? <div className="product-card__out">Нет в наличии</div> : null}
                                             </div>

@@ -114,10 +114,19 @@ function ProductCard({ product, index, onAddToCart }) {
         <div className="product-card">
             <Link href={`/shop/${product.slug}`} style={{ display: 'contents' }}>
                 <div className="product-card__media">
-                    <div
-                        className="product-card__image"
-                        style={{ background: PALETTE[index % PALETTE.length] }}
-                    />
+                    {product.image ? (
+                        <img
+                            src={product.image}
+                            alt={product.title}
+                            className="product-card__image"
+                            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                        />
+                    ) : (
+                        <div
+                            className="product-card__image"
+                            style={{ background: PALETTE[index % PALETTE.length] }}
+                        />
+                    )}
                     {product.isNew ? (
                         <span className="product-card__badge">Новинка</span>
                     ) : null}
