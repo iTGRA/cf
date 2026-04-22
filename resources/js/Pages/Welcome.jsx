@@ -5,49 +5,121 @@ export default function Welcome() {
 
     return (
         <>
-            <Head title="Колледж Фаберже" />
+            <Head title="Колледж декоративно-прикладного искусства им. Карла Фаберже" />
 
-            <div className="relative flex min-h-screen flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-12">
-                <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0"
+            <div
+                className="flex min-h-screen flex-col justify-between"
+                style={{
+                    padding: 'var(--container-padding)',
+                    background: 'var(--color-background)',
+                    color: 'var(--color-ink)',
+                }}
+            >
+                <header
+                    className="flex items-center justify-between"
                     style={{
-                        background:
-                            'radial-gradient(ellipse at 20% 30%, rgba(200,165,114,0.10), transparent 55%), radial-gradient(ellipse at 80% 80%, rgba(200,165,114,0.06), transparent 55%)',
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: 500,
+                        fontSize: 'var(--text-caps)',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'var(--color-secondary)',
                     }}
-                />
-
-                <header className="relative z-10 flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-paper-muted)] sm:text-xs">
-                    <span className="font-serif text-base tracking-[0.08em] text-[color:var(--color-paper)] normal-case sm:text-lg">
-                        Колледж Фаберже
+                >
+                    <span
+                        style={{
+                            fontFamily: 'var(--font-display)',
+                            fontWeight: 400,
+                            fontSize: '18px',
+                            letterSpacing: '0.02em',
+                            textTransform: 'none',
+                            color: 'var(--color-ink)',
+                        }}
+                    >
+                        КДПИ им. Карла Фаберже
                     </span>
-                    <span>Санкт-Петербург</span>
+                    <span>Москва</span>
                 </header>
 
-                <main className="relative z-10 flex max-w-3xl flex-1 flex-col justify-center py-16">
-                    <h1 className="font-serif text-5xl leading-[0.95] tracking-tight sm:text-7xl md:text-8xl lg:text-[9rem]">
-                        Сайт{' '}
-                        <em
-                            className="italic"
-                            style={{ color: 'var(--color-gold)' }}
-                        >
-                            в разработке
-                        </em>
-                    </h1>
-                    <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:var(--color-paper-muted)] sm:mt-8 sm:text-lg">
-                        Готовим новое цифровое пространство колледжа — о специальностях, приёмной кампании, жизни и истории. Скоро здесь появится всё самое важное.
+                <main className="flex max-w-4xl flex-1 flex-col justify-center py-20">
+                    <p
+                        className="mb-8"
+                        style={{
+                            fontFamily: 'var(--font-body)',
+                            fontWeight: 500,
+                            fontSize: 'var(--text-caps)',
+                            letterSpacing: '0.12em',
+                            textTransform: 'uppercase',
+                            color: 'var(--color-secondary)',
+                        }}
+                    >
+                        Новый сайт — скоро
                     </p>
+
+                    <h1
+                        style={{
+                            fontFamily: 'var(--font-display)',
+                            fontWeight: 300,
+                            fontSize: 'var(--text-hero)',
+                            lineHeight: 'var(--leading-tight)',
+                            letterSpacing: '-0.02em',
+                            color: 'var(--color-ink)',
+                        }}
+                    >
+                        Учим тех,
+                        <br />
+                        кто создаёт шедевры
+                    </h1>
+
+                    <p
+                        className="mt-10 max-w-xl"
+                        style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: 'var(--text-body-l)',
+                            lineHeight: 'var(--leading-loose)',
+                            color: 'var(--color-secondary)',
+                        }}
+                    >
+                        Готовим новое цифровое лицо колледжа декоративно-прикладного искусства. Девять специальностей, три корпуса в Москве, один путь — в профессию.
+                    </p>
+
+                    <a
+                        href="https://collegefaberge.mskobr.ru"
+                        className="group mt-12 inline-flex items-center gap-3"
+                        style={{
+                            fontFamily: 'var(--font-body)',
+                            fontWeight: 500,
+                            fontSize: 'var(--text-caps)',
+                            letterSpacing: '0.1em',
+                            textTransform: 'uppercase',
+                            color: 'var(--color-ink)',
+                            borderBottom: '1px solid var(--color-ink)',
+                            paddingBottom: '4px',
+                            alignSelf: 'flex-start',
+                            transition: 'opacity var(--duration-base) var(--ease-base)',
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.6')}
+                        onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+                    >
+                        Официальный сайт колледжа
+                        <span aria-hidden>→</span>
+                    </a>
                 </main>
 
-                <footer className="relative z-10 flex flex-wrap items-end justify-between gap-4 text-[11px] uppercase tracking-[0.18em] text-[color:var(--color-paper-muted)] sm:text-xs">
-                    <span className="inline-flex items-center gap-2.5">
-                        <span
-                            className="h-1.5 w-1.5 animate-pulse rounded-full"
-                            style={{ background: 'var(--color-gold)' }}
-                        />
-                        В работе
-                    </span>
-                    <span>© {year}</span>
+                <footer
+                    className="flex flex-wrap items-end justify-between gap-4 pt-8"
+                    style={{
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: 500,
+                        fontSize: 'var(--text-caps)',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'var(--color-secondary)',
+                        borderTop: '1px solid var(--color-border)',
+                    }}
+                >
+                    <span>© {year} · Колледж Фаберже</span>
+                    <span>Сайт в разработке</span>
                 </footer>
             </div>
         </>
