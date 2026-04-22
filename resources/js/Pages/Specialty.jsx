@@ -225,9 +225,9 @@ export default function Specialty({ slug }) {
                                                 <span className={`spec-path__step${i === specialty.careerPath.length - 1 ? ' spec-path__step--last' : ''}`}>
                                                     {step}
                                                 </span>
-                                                {i < specialty.careerPath.length - 1 && (
-                                                    <span className="spec-path__arrow" aria-hidden>→</span>
-                                                )}
+                                                {i < specialty.careerPath.length - 1 ? (
+                                                    <span className="spec-path__arrow" aria-hidden="true">→</span>
+                                                ) : null}
                                             </span>
                                         ))}
                                     </div>
@@ -274,7 +274,7 @@ export default function Specialty({ slug }) {
                 </section>
 
                 {/* ---- Other specialties in same tag ---- */}
-                {otherSpecs.length > 0 && (
+                {otherSpecs.length > 0 ? (
                     <section className="home-section">
                         <div className="home-container">
                             <div className="home-section__head">
@@ -297,13 +297,13 @@ export default function Specialty({ slug }) {
                                 ))}
                             </div>
                             <div style={{ marginTop: 40, textAlign: 'center' }}>
-                                <Link href="/abiturientam" className="ds2-btn ds2-btn--secondary ds2-btn--md">
+                                <Link href="/abiturientam" className="ds2-btn ds2-btn--secondary ds2-btn--lg">
                                     Все специальности
                                 </Link>
                             </div>
                         </div>
                     </section>
-                )}
+                ) : null}
 
                 <HomeFooter />
             </div>
