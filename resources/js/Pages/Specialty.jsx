@@ -220,16 +220,20 @@ export default function Specialty({ slug }) {
                                 <div>
                                     <div className="home-section__kicker" style={{ marginBottom: 20 }}>Карьерный путь</div>
                                     <div className="spec-path">
-                                        {specialty.careerPath.map((step, i) => (
-                                            <span key={step} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                                <span className={`spec-path__step${i === specialty.careerPath.length - 1 ? ' spec-path__step--last' : ''}`}>
+                                        {specialty.careerPath.flatMap((step, i) => {
+                                            const isLast = i === specialty.careerPath.length - 1;
+                                            const items = [
+                                                <span key={`s-${step}`} className={`spec-path__step${isLast ? ' spec-path__step--last' : ''}`}>
                                                     {step}
                                                 </span>
-                                                {i < specialty.careerPath.length - 1 ? (
-                                                    <span className="spec-path__arrow" aria-hidden="true">→</span>
-                                                ) : null}
-                                            </span>
-                                        ))}
+                                            ];
+                                            if (!isLast) {
+                                                items.push(
+                                                    <span key={`a-${i}`} className="spec-path__arrow" aria-hidden="true">→</span>
+                                                );
+                                            }
+                                            return items;
+                                        })}
                                     </div>
                                 </div>
 
