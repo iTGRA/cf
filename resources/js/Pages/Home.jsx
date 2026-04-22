@@ -1,5 +1,5 @@
 import { Head } from '@inertiajs/react';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import HomeHeader from '../Components/Layout/HomeHeader';
 import HomeFooter from '../Components/Layout/HomeFooter';
 
@@ -230,9 +230,22 @@ function AdmissionForm({ onSuccess }) {
    Page
    ============================================================ */
 
+const HERO_IMAGES = [
+    '/images/hero_block1.jpg',
+    '/images/hero_block2.jpg',
+];
+
 export default function Home({ openDay }) {
     const [specFilter, setSpecFilter] = useState('Все');
+    const [heroIndex, setHeroIndex] = useState(0);
     const formRef = useRef(null);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setHeroIndex((i) => (i + 1) % HERO_IMAGES.length);
+        }, 1500);
+        return () => clearInterval(timer);
+    }, []);
 
     const scrollToForm = () => {
         formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -316,7 +329,15 @@ export default function Home({ openDay }) {
                                 </div>
 
                                 <div className="home-hero__visual" aria-hidden="true">
-                                    <div className="home-hero__image" />
+                                    {HERO_IMAGES.map((src, i) => (
+                                        <img
+                                            key={src}
+                                            src={src}
+                                            alt=""
+                                            className="home-hero__image"
+                                            style={{ opacity: heroIndex === i ? 1 : 0 }}
+                                        />
+                                    ))}
                                     <div className="home-hero__image-label">Студенческие работы</div>
                                 </div>
                             </div>
