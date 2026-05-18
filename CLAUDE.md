@@ -239,7 +239,7 @@ GET  /404                       → errors.404
 Продакшн:   https://[домен TBD]
 Путь:       /var/www/faberge
 SSR порт:   13716 (следующий свободный после na-ugle 13714, dom-na-utese 13715)
-SSH alias:  na-ugle (85.236.186.16, Ubuntu 24.04)
+SSH alias:  swipe-vibe-code (85.236.186.16, Ubuntu 24.04)
 MySQL:      БД faberge, user faberge@localhost
 Git remote: TBD
 ```
